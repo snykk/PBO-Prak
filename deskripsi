@@ -1,0 +1,62 @@
+Soal 1
+Like they said, learning by doing. 
+Is best experience the teacher.
+
+Buatlah 1 buah file program yang memiliki:
+- 3 class parent dengan masing-masing 5 child class menggunakan inheritence (total 15 class). Pastikan tiap class memiliki cukup 1 atribut yang beda dengan class lainnya
+
+Hint: 1 file .cs bisa memiliki banyak class, tidak selalu harus 1 file 1 class.
+
+Soal 2
+Buatlah sebuah program kalkulator dengan keharusan mengimplementasikan semua interface-interface berikut ke dalam source code:
+    interface Module1    
+    {    
+        int Addition(int a, int b);    
+    }    
+    interface Module2    
+    {    
+        int Subtraction(int x, int y);    
+    }    
+    interface Module3    
+    {    
+        int Multiplication(int r, int s);    
+    }    
+    interface Module4    
+    {    
+        int Division(int c, int d);    
+    }
+Gunakan overriding method serta multiple inheritence! Program dapat menerima input user berupa angka yang ingin dikalkulasi dan hasil kalkulasi ditampilkan di terminal.
+
+
+Soal 3
+"Bang, projectnya error nih. Benerin ya? Tadi harusnya outputnya di terminal kayak gini."
+Output:
+	I'm a Line.
+	I'm a Circle.
+	I'm a Square.
+	I'm just a generic drawing object.
+	
+"Ini source code yang selamat. Harus dipake tapi jangan diubah-ubah y bang source code yang selamat ini."
+
+using System;
+public class DrawDemo
+{
+    public static int Main( )
+    {
+        DrawingObject[] objects = new DrawingObject[4];
+
+        objects[0] = new Line();
+        objects[1] = new Circle();
+        objects[2] = new Square();
+        objects[3] = new DrawingObject();
+
+        foreach (DrawingObject item in objects)
+        {
+            item.Draw();
+        }
+
+        return 0;
+    }
+}
+
+"Klo cuman writeline teks outputnya tar nilainya mines y bang >:("
